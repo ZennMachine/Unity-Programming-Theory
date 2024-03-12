@@ -5,20 +5,21 @@ using UnityEngine;
 public class Tank : Vehicle
 {
     // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
-        
+        base.Start();
     }
 
     // Update is called once per frame
-    void Update()
+    protected override void Update()
     {
-        if (Input.GetKeyDown("Space"))
+        base.Update();
+        if (Input.GetKeyDown("space"))
             UseAbility();
     }
 
     public override void UseAbility()
     {
-        
+        Debug.Log("Pew");
     }
 }

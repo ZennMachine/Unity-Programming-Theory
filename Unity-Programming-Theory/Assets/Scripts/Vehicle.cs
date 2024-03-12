@@ -17,31 +17,37 @@ public class Vehicle : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
         rb = gameObject.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
-
+        Debug.Log("Horizontal");
         if (horizontal != 0)
+        {
             Accelerate(horizontal);
+        }
+            
         if (vertical != 0)
+        {
             Turn(vertical);
+        } 
     }
 
     public void Accelerate(float input)
     {
-        rb.AddRelativeForce(Vector3.forward * speed * input * Time.deltaTime, ForceMode.Impulse);
+        Debug.Log("Horizontal" + input);
+        rb.AddForce(Vector3.forward * speed * input * Time.deltaTime);
     }
 
     public void Turn(float input)
     {
-        rb.AddTorque(Vector3.right * speed * input * Time.deltaTime, ForceMode.Impulse);
+        rb.AddTorque(Vector3.right * speed * input * Time.deltaTime);
     }
 
     public void DealDamage()

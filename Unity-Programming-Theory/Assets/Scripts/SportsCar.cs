@@ -5,15 +5,21 @@ using UnityEngine;
 public class SportsCar : Vehicle
 {
     // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
-        
+        base.Start();
     }
 
     // Update is called once per frame
-    void Update()
+    protected override void Update()
     {
-        if (Input.GetKeyDown("Space"))
+        base.Update();
+        if (Input.GetKeyDown("space"))
             UseAbility();
+    }
+
+    private void UseAbility()
+    {
+        Debug.Log("Car noises");
     }
 }

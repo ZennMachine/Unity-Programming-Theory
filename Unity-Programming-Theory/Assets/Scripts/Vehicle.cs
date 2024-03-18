@@ -27,27 +27,25 @@ public class Vehicle : MonoBehaviour
     {
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
-        Debug.Log("Horizontal");
-        if (horizontal != 0)
-        {
-            Accelerate(horizontal);
-        }
-            
         if (vertical != 0)
         {
-            Turn(vertical);
+            Accelerate(vertical);
+        }
+            
+        if (horizontal != 0)
+        {
+            Turn(horizontal);
         } 
     }
 
     public void Accelerate(float input)
     {
-        Debug.Log("Horizontal" + input);
-        rb.AddForce(Vector3.forward * speed * input * Time.deltaTime);
+        transform.Translate(Vector3.forward * input * speed * Time.deltaTime);
     }
 
     public void Turn(float input)
     {
-        rb.AddTorque(Vector3.right * speed * input * Time.deltaTime);
+        transform.Rotate(Vector3.up * input * turnSpeed * Time.deltaTime);
     }
 
     public void DealDamage()

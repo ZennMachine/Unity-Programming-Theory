@@ -18,7 +18,7 @@ public class SportsCar : Vehicle
             UseAbility();
     }
 
-    private void UseAbility()
+    public override void UseAbility()
     {
         Debug.Log("Car noises");
     }

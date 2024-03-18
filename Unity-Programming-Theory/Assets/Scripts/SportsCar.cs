@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SportsCar : Vehicle
 {
+    public int vehicleID = 2;
     // Start is called before the first frame update
     protected override void Start()
     {
@@ -18,7 +19,7 @@ public class SportsCar : Vehicle
             UseAbility();
     }
 
-    private void UseAbility()
+    public override void UseAbility()
     {
         Debug.Log("Car noises");
     }

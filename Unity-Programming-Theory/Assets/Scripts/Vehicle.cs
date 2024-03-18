@@ -15,7 +15,6 @@ public class Vehicle : MonoBehaviour
         set { m_health = health; }
     }
 
-
     // Start is called before the first frame update
     protected virtual void Start()
     {

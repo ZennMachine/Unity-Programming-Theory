@@ -5,8 +5,9 @@ using System.IO;
 
 public class DataManager : MonoBehaviour
 {
-    public DataManager Instance;
+    public static DataManager Instance;
     public int hiScore;
+    public int currentVehicleID;
     private void Awake()
     {
         if(Instance != null)
@@ -21,13 +22,14 @@ public class DataManager : MonoBehaviour
     public class GameData
     {
         public int hiScore;
-        public Vehicle currentVehicle;
+        public int currentVehicleID;
     }
 
     public void SaveData()
     {
         GameData data = new GameData();
         data.hiScore = hiScore;
+        data.currentVehicleID = currentVehicleID;
 
         string json = JsonUtility.ToJson(data);
 
@@ -43,6 +45,7 @@ public class DataManager : MonoBehaviour
             GameData data = JsonUtility.FromJson<GameData>(json);
 
             hiScore = data.hiScore;
+            currentVehicleID = data.currentVehicleID;
         }
     }
 }

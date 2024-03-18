@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Tank : Vehicle
 {
+    public int vehicleID = 1;
     // Start is called before the first frame update
     protected override void Start()
     {

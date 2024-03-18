@@ -272,7 +272,7 @@ GameObject:
   - component: {fileID: 176048283}
   - component: {fileID: 176048282}
   m_Layer: 5
-  m_Name: Tank
+  m_Name: TankButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -342,13 +342,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1868210443}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1868210444}
+        m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
+        m_MethodName: SelectTank
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -496,7 +496,7 @@ GameObject:
   - component: {fileID: 234998505}
   - component: {fileID: 234998504}
   m_Layer: 5
-  m_Name: Image (2)
+  m_Name: BuggyImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -572,7 +572,7 @@ GameObject:
   - component: {fileID: 264300419}
   - component: {fileID: 264300418}
   m_Layer: 5
-  m_Name: SportsCar
+  m_Name: SportsCarButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -642,13 +642,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1868210443}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1868210444}
+        m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
+        m_MethodName: SelectSportsCar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1026,8 +1026,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d1735108173f4c84bb3be6476ddce3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Instance: {fileID: 0}
   hiScore: 0
+  currentVehicle: {fileID: 0}
 --- !u!4 &785837910
 Transform:
   m_ObjectHideFlags: 0
@@ -1226,7 +1226,7 @@ GameObject:
   - component: {fileID: 939904134}
   - component: {fileID: 939904133}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: SportsCarImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1434,7 +1434,7 @@ GameObject:
   - component: {fileID: 1012398632}
   - component: {fileID: 1012398631}
   m_Layer: 5
-  m_Name: Image
+  m_Name: TankImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1984,7 +1984,7 @@ GameObject:
   - component: {fileID: 1701685418}
   - component: {fileID: 1701685417}
   m_Layer: 5
-  m_Name: Buggy
+  m_Name: BuggyButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2054,13 +2054,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1868210443}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1868210444}
+        m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
+        m_MethodName: SelectBuggy
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2175,6 +2175,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainmenu: {fileID: 1696781856}
   vehicleselectmenu: {fileID: 1795184525}
+  tankImage: {fileID: 1012398631}
+  sportsCarImage: {fileID: 939904133}
+  buggyImage: {fileID: 234998504}
 --- !u!4 &1868210445
 Transform:
   m_ObjectHideFlags: 0

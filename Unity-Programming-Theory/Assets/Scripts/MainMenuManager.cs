@@ -24,6 +24,8 @@ public class MainMenuManager : MonoBehaviour
         CheckCurrentVehicle();
         
     }
+
+    // ABSTRACTION
     // Updates the menu based on saved vehicle
     private void CheckCurrentVehicle()
     {

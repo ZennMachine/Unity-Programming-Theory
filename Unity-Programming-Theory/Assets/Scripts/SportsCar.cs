@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// INHERITENCE
 public class SportsCar : Vehicle
 {
     public int vehicleID = 2;
@@ -11,7 +12,7 @@ public class SportsCar : Vehicle
         base.Start();
     }
 
-    // Update is called once per frame
+    // POLYMORPHISM
     protected override void Update()
     {
         base.Update();

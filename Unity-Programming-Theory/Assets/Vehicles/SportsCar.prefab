@@ -1039,9 +1039,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b391d0b2b748f4b5d83c56cadd2e3c54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 18
+  speed: 16
   maxSpeed: 60
-  turnSpeed: 50
+  turnSpeed: 46
   vehicleID: 2
 --- !u!1 &8652110427072259586
 GameObject:

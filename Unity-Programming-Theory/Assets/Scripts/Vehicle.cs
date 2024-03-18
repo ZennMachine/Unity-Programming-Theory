@@ -9,6 +9,7 @@ public class Vehicle : MonoBehaviour
     public float turnSpeed = 50;
     private Rigidbody rb;
     private int m_health = 100;
+    // ENCAPSULATION
     public int health
     {
         get { return m_health; }
